@@ -1,0 +1,181 @@
+[gd_scene load_steps=3 format=3 uid="uid://brlmesi1ta5vm"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_ldx4a"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6m2bt"]
+font_size = 32
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_ldx4a")
+metadata/_edit_lock_ = true
+
+[node name="NewGame" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -46.5
+offset_top = -47.0
+offset_right = 46.5
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "New Game"
+
+[node name="WidthLbl" type="Label" parent="."]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 595.0
+offset_right = 236.0
+offset_bottom = 621.0
+text = "Width: 10"
+
+[node name="Width" type="HSlider" parent="WidthLbl"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 16.0
+offset_top = -9.0
+offset_right = 167.0
+offset_bottom = 7.0
+grow_horizontal = 0
+grow_vertical = 2
+min_value = 5.0
+max_value = 72.0
+value = 10.0
+tick_count = 1
+
+[node name="HeightLbl" type="Label" parent="."]
+layout_mode = 1
+offset_left = 144.0
+offset_top = 617.0
+offset_right = 236.0
+offset_bottom = 643.0
+text = "Height: 10"
+
+[node name="Height" type="HSlider" parent="HeightLbl"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 16.0
+offset_top = -9.0
+offset_right = 167.0
+offset_bottom = 7.0
+grow_horizontal = 0
+grow_vertical = 2
+min_value = 5.0
+max_value = 34.0
+value = 10.0
+tick_count = 1
+
+[node name="MinesLbl" type="Label" parent="."]
+layout_mode = 1
+offset_left = 761.0
+offset_top = 607.0
+offset_right = 848.0
+offset_bottom = 633.0
+text = "Mines: 10"
+
+[node name="Mines" type="HSlider" parent="MinesLbl"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 16.0
+offset_top = -9.0
+offset_right = 167.0
+offset_bottom = 7.0
+grow_horizontal = 0
+grow_vertical = 2
+min_value = 10.0
+max_value = 90.0
+value = 10.0
+tick_count = 1
+
+[node name="Beginner" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -95.0
+offset_right = 78.0
+offset_bottom = -64.0
+grow_vertical = 0
+text = "Beginner"
+
+[node name="Intermediate" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -63.0
+offset_right = 110.0
+offset_bottom = -32.0
+grow_vertical = 0
+text = "Intermediate"
+
+[node name="Expert" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -31.0
+offset_right = 59.0
+grow_vertical = 0
+text = "Expert"
+
+[node name="GameStat" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -37.5
+offset_top = -96.0
+offset_right = 37.5
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Lost!"
+label_settings = SubResource("LabelSettings_6m2bt")
+
+[node name="Stopwatch" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -35.0
+offset_top = -26.0
+offset_right = -3.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "0:00.00"
+
+[connection signal="pressed" from="NewGame" to="." method="_on_new_game_pressed"]
+[connection signal="value_changed" from="WidthLbl/Width" to="." method="_on_width_value_changed"]
+[connection signal="value_changed" from="HeightLbl/Height" to="." method="_on_height_value_changed"]
+[connection signal="value_changed" from="MinesLbl/Mines" to="." method="_on_mines_value_changed"]
+[connection signal="pressed" from="Beginner" to="." method="_on_beginner_pressed"]
+[connection signal="pressed" from="Intermediate" to="." method="_on_intermediate_pressed"]
+[connection signal="pressed" from="Expert" to="." method="_on_expert_pressed"]

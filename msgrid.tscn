@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://b56hg0qdd30f5"]
+
+[ext_resource type="Script" path="res://msgrid.gd" id="1_t4qn2"]
+
+[node name="MSGrid" type="GridContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -52.0
+offset_bottom = -52.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 3
+script = ExtResource("1_t4qn2")
