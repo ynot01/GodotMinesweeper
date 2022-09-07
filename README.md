@@ -1,6 +1,8 @@
 # GodotMinesweeper
 Minesweeper built from the ground up in Godot
 
+Made in 6 hours
+
 Icons sprites by hand using Paint.NET
 
 Numbers are in Arial font
