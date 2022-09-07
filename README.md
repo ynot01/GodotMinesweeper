@@ -1,5 +1,5 @@
 # GodotMinesweeper
-Minesweeper built from the ground up in Godot
+Minesweeper built from the ground up in Godot 4
 
 Made in 6 hours
 
