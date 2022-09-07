@@ -1,5 +1,5 @@
 # GodotMinesweeper
-Minesweeper built from the ground up in Godot 4
+Minesweeper built from the ground up in Godot Engine [v4.0.alpha15.official.432b25d36](https://github.com/godotengine/godot/tree/432b25d3649319517827dbf7bc275e81e0a2b92e)
 
 Made in 6 hours
 
