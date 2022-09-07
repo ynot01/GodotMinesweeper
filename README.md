@@ -1,6 +1,10 @@
 # GodotMinesweeper
 Minesweeper built from the ground up in Godot
 
+Icons sprites by hand using Paint.NET
+
+Numbers are in Arial font
+
 Left click - Clear tile
 
 Right click - Flag tile
